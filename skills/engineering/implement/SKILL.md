@@ -6,6 +6,8 @@ disable-model-invocation: true
 
 Implement the work described by the user in the spec or tickets.
 
+If the user passes a ticket reference, fetch it from the issue tracker and state its title before starting. If the reference is ambiguous, ask.
+
 Before writing code: if the repo uses the wtree layout (a `.bare` directory at the repo root) and you are not already inside a feature worktree, use /feature-worktree to start one and continue there. Never commit feature work to main.
 
 Use /tdd where possible, at pre-agreed seams.
