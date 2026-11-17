@@ -38,6 +38,8 @@ Every triaged item ends with exactly one category role and one state role. There
 
 That is the whole vocabulary. The rule of exactly one state role per item keeps the queries simple. The states are also the most-requested area of the [skill](https://www.aihero.dev/ai-coding-dictionary/skill). Users have asked for a state for work that is specified but blocked on another issue, a `deferred` state for work that waits on a future trigger, and a terminal `implemented` state. None of those has shipped. See the questions below.
 
+Beyond that core, a repo can optionally define **priority** labels (canonical `P0`/`P1`/`P2`, most to least urgent). They follow the same config rule as the label strings: where the tracker config defines them, `triage` decides one alongside the category and state, the "show what needs attention" listing sorts by priority (oldest first within equal priority) and surfaces each item's priority, and a landing on `ready-for-agent` or `ready-for-human` stamps the agreed priority. Where the config defines none, the listing stays oldest first and no priority is stamped.
+
 `wontfix` has three cases. The difference matters because only one of them writes to the knowledge base:
 
 | Why you're closing it | What happens |
